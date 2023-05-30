@@ -9,8 +9,8 @@ const apiKey = config.REACT_APP_API_KEY;
 const API_URL = `http://www.omdbapi.com?apiKey=${apiKey}`;
 
 
- 
-const App = () => {
+  
+const App = () => { 
   
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
