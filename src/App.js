@@ -2,16 +2,19 @@ import {useState, useEffect} from 'react';
 import MovieCard from './MovieCard';
 import './App.css';
 import SearchIcon from './search.svg';
-import config from './config.json';
+
+// require('dotenv').config()  
+// import config from './config.json';
 
  
-const apiKey = config.REACT_APP_API_KEY;
-const API_URL = `http://www.omdbapi.com?apiKey=${apiKey}`;
+// const apiKey = config.REACT_APP_API_KEY;
 
 
-  
+
 const App = () => { 
-  
+
+  // console.log(process.env.REACT_APP_API_KEY)
+  const API_URL = `http://www.omdbapi.com?apiKey=${process.env.REACT_APP_API_KEY}`;
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
   const searchMovies = async (title) => {
