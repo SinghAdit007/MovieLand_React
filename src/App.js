@@ -14,7 +14,7 @@ import SearchIcon from './search.svg';
 const App = () => { 
 
   // console.log(process.env.REACT_APP_API_KEY)
-  const API_URL = `http://www.omdbapi.com?apiKey=${process.env.REACT_APP_API_KEY}`;
+  const API_URL = `https://www.omdbapi.com?apiKey=${process.env.REACT_APP_API_KEY}`;
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
   const searchMovies = async (title) => {
